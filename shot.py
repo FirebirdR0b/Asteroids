@@ -1,13 +1,12 @@
 import pygame
-import random
 from circleshape import CircleShape
 from constants import *
-from player import *
 
 
-class Asteroid(CircleShape):
-    def __init__(self, x, y, radius):
-        super().__init__(x, y, radius)
+
+class Shot(CircleShape):
+    def __init__(self, x, y):
+        super().__init__(x, y, SHOT_RADIUS)
         self.velocity = pygame.Vector2(0, 0)
 
     def draw(self, surface):
@@ -16,5 +15,4 @@ class Asteroid(CircleShape):
     def update(self, dt):
         self.position = self.position + (self.velocity * dt)
 
-
-
+    
