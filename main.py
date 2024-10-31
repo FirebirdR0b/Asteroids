@@ -62,7 +62,16 @@ def main():
 
 		pygame.display.flip()
 
-		
+		for asteroid in asteroids:
+			asteroid.update(dt)
+		for asteroid in asteroids:
+			asteroid.draw(screen)
+
+		for asteroid in asteroids:
+			for shot in shots:
+				if shot.collides_with(asteroid):
+					asteroid.split()
+					shot.kill()
 		
 if __name__ == "__main__":
 	main()
