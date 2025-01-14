@@ -6,6 +6,8 @@ from asteroid import *
 from asteroidfield import *
 from shot import Shot
 
+#Asteroids Game
+
 pygame.init()
 
 clock = pygame.time.Clock()
