@@ -6,7 +6,7 @@ from asteroid import *
 from asteroidfield import *
 from shot import Shot
 
-#Asteroids Game
+#Asteroids Game#
 
 pygame.init()
 
